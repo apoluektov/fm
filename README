@@ -1,0 +1,6 @@
+This is my solution for the 'follower-maze' problem I coded while applying to SoundCloud.
+
+The solution demonstrates usage of blocking select with non-blocking sockets.
+Once the server starts, it creates thread for listening polling network and all event dispatching work is being done in that single thread.
+The main thread can be used for communication with the user/other piece of software.
+The local socket is used for communication between the threads, which in my opinion is a quite elegant reusing of the polling thread main loop.
